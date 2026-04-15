@@ -57,15 +57,6 @@
       <stop offset="50%" stop-color="#0070f3" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
     </linearGradient>
-    <!-- HUD corner gradient -->
-    <linearGradient id="cornerFade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.72"/>
-      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="cornerFadeV" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.72"/>
-      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
-    </linearGradient>
     <!-- Constellation line glow (for traveling light) -->
     <linearGradient id="lineGlow1" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
@@ -393,16 +384,6 @@
   <circle cx="670" cy="400" r="1.1" fill="#fff" opacity="0"><animate attributeName="cy" values="420;-15" dur="20s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.32;0.32;0" dur="20s" repeatCount="indefinite"/></circle>
   <circle cx="820" cy="400" r="0.9" fill="#fff" opacity="0"><animate attributeName="cy" values="435;-15" dur="26s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.25;0.25;0" dur="26s" repeatCount="indefinite"/></circle>
   <circle cx="950" cy="400" r="1.3" fill="#0070f3" opacity="0"><animate attributeName="cy" values="410;-20" dur="15s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.35;0.35;0" dur="15s" repeatCount="indefinite"/></circle>
-
-  <!-- ===== HUD CORNERS ===== -->
-  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="1s" begin="2s" fill="freeze"/>
-    <!-- Top-right -->
-    <rect x="930" y="20" width="50" height="1" fill="url(#cornerFade)" transform="scale(-1,1)" transform-origin="955 20"/>
-    <rect x="979" y="20" width="1" height="35" fill="url(#cornerFadeV)"/>
-    <!-- Bottom-right -->
-    <rect x="930" y="379" width="50" height="1" fill="url(#cornerFade)" transform="scale(-1,1)" transform-origin="955 379"/>
-    <rect x="979" y="345" width="1" height="35" fill="url(#cornerFadeV)" transform="scale(1,-1)" transform-origin="979 362"/>
-  </g>
 
   <!-- ===== OUTER HALO (wide ambient glow) ===== -->
   <ellipse cx="500" cy="155" rx="270" ry="220" fill="url(#haloOuter)">
