@@ -7,13 +7,13 @@
 </p>
 
 ## **Juan Pablo Velez**
-**Full Stack Engineer | Next.js | React | TypeScript**
+**Full Stack Engineer | Frontend, Backend & Scalable Systems**
 
-I build end-to-end web products with a strong focus on **performance, scalability, and user experience**, paying close attention to both technical architecture and interface quality.
+I design and build **end-to-end web applications** with equal attention to frontend quality and backend reliability, focusing on architecture, scalability, security, and long-term maintainability.
 
-My approach combines **high-level frontend execution**, rigorous implementation, and a long-term engineering mindset: clean interfaces, consistent components, maintainable code, and technical decisions that can hold up as a product grows.
+My work combines **high-quality user interfaces** with solid backend foundations: clear system design, clean code organization, dependable APIs, and engineering decisions that remain strong as products evolve and complexity increases.
 
-I primarily work with **Next.js, React, TypeScript, and Tailwind CSS** to turn ideas into fast, clear, and well-executed experiences. This profile brings together projects that reflect how I think and build: **attention to detail, technical judgment, discipline, and continuous improvement**.
+I primarily work with **Next.js, React, TypeScript, and modern web technologies** to deliver products that are fast for users, reliable in production, and structured for growth. This profile reflects the way I build: with strong engineering principles, thoughtful architecture, and consistent execution.
 
 ---
 
