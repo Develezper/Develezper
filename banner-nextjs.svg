@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 0 1100 400" width="1100" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-200 0 1400 400" width="1400" height="400">
   <defs>
     <!-- ===== GRADIENTS ===== -->
     <radialGradient id="halo" cx="50%" cy="40%" r="30%">
@@ -93,7 +93,7 @@
   </defs>
 
   <!-- ===== BACKGROUND ===== -->
-  <rect x="-50" width="1100" height="400" fill="none"/>
+  <rect x="-200" width="1400" height="400" fill="none"/>
 
   <!-- ===== CONSTELLATION NETWORK ===== -->
   <!-- Static base lines (hidden, only traveling light visible) -->
