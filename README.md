@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-white-mode-text-fix" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3-dark.svg?v=20260415-dark-light-split" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-dark-light-split" />
+    <img src="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-dark-light-split" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
+  </picture>
 </p>
 
 ## **Juan Pablo Velez**

@@ -1,0 +1,670 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-320 -360 1840 1480" width="1840" height="1480">
+  <defs>
+    <!-- ===== GRADIENTS ===== -->
+    <radialGradient id="halo" cx="50%" cy="40%" r="30%">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.82"/>
+      <stop offset="45%" stop-color="#0070f3" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloOuter" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- N diagonal: bottom (opaque) → top (transparent) -->
+    <linearGradient id="diagFade" gradientUnits="userSpaceOnUse"
+                    x1="542" y1="218" x2="481" y2="131">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Right bar: top (opaque) → bottom (transparent) -->
+    <linearGradient id="rightBarFade" gradientUnits="userSpaceOnUse"
+                    x1="526" y1="124" x2="526" y2="177">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Logo inner glow -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Horizontal sweep -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0070f3" stop-opacity="0.06"/>
+      <stop offset="55%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Vertical scan line -->
+    <linearGradient id="scanV" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0070f3" stop-opacity="0.025"/>
+      <stop offset="55%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Separator -->
+    <linearGradient id="lineFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0070f3" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineAura" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fcfff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4aa6ff" stop-opacity="0.48"/>
+      <stop offset="100%" stop-color="#8fcfff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Text underline glow -->
+    <linearGradient id="textGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0070f3" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Constellation line glow (for traveling light) -->
+    <linearGradient id="lineGlow1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#0070f3" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="globalPulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0.26"/>
+      <stop offset="55%" stop-color="#0070f3" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
+    </radialGradient>
+    <!-- ===== CLIP PATH ===== -->
+    <clipPath id="nClip"><circle cx="500" cy="155" r="98"/></clipPath>
+    <!-- Text reveal clip -->
+    <clipPath id="textReveal">
+      <rect x="300" y="280" width="0" height="50">
+        <animate attributeName="width" from="0" to="400" dur="1.5s" begin="1.5s" fill="freeze"
+                 calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+    </clipPath>
+    <!-- Glow filter for traveling lines -->
+    <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.45" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="separatorBloom" x="-60%" y="-800%" width="220%" height="1700%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5.8" result="soft"/>
+      <feMerge>
+        <feMergeNode in="soft"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+</defs>
+
+  <!-- ===== BACKGROUND ===== -->
+  <rect x="-320" y="-360" width="1840" height="1480" fill="none"/>
+
+  <!-- ===== FULL CANVAS STAR FIELD ===== -->
+  <g opacity="0.78">
+    <circle cx="-260" cy="-280" r="1.1" fill="#8bc8ff" opacity="0.28"><animate attributeName="opacity" values="0.2;0.55;0.2" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="-120" cy="-130" r="1.4" fill="#6eb8ff" opacity="0.35"><animate attributeName="opacity" values="0.25;0.62;0.25" dur="6.1s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="-220" r="0.9" fill="#ffffff" opacity="0.24"><animate attributeName="opacity" values="0.16;0.42;0.16" dur="5.3s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="-40" r="1.5" fill="#60adff" opacity="0.4"><animate attributeName="opacity" values="0.24;0.72;0.24" dur="7.2s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="-200" r="1.1" fill="#a7d8ff" opacity="0.3"><animate attributeName="opacity" values="0.2;0.58;0.2" dur="5.9s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="-80" r="1.2" fill="#79c0ff" opacity="0.3"><animate attributeName="opacity" values="0.2;0.57;0.2" dur="6.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1040" cy="-250" r="1.4" fill="#3d98ff" opacity="0.34"><animate attributeName="opacity" values="0.2;0.64;0.2" dur="4.8s" repeatCount="indefinite"/></circle>
+    <circle cx="1320" cy="-70" r="1.1" fill="#ffffff" opacity="0.24"><animate attributeName="opacity" values="0.12;0.45;0.12" dur="6.7s" repeatCount="indefinite"/></circle>
+    <circle cx="1460" cy="-280" r="0.9" fill="#74bdff" opacity="0.2"><animate attributeName="opacity" values="0.1;0.35;0.1" dur="8.1s" repeatCount="indefinite"/></circle>
+
+    <circle cx="-210" cy="80" r="0.9" fill="#7ec3ff" opacity="0.2"><animate attributeName="opacity" values="0.12;0.34;0.12" dur="7.6s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="130" r="1.7" fill="#4da3ff" opacity="0.42"><animate attributeName="opacity" values="0.25;0.76;0.25" dur="4.3s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="210" r="1.1" fill="#9fd5ff" opacity="0.26"><animate attributeName="opacity" values="0.15;0.48;0.15" dur="6.4s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="160" r="1.4" fill="#61b0ff" opacity="0.34"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="5.6s" repeatCount="indefinite"/></circle>
+    <circle cx="960" cy="250" r="1.6" fill="#4f9fff" opacity="0.42"><animate attributeName="opacity" values="0.24;0.78;0.24" dur="4.9s" repeatCount="indefinite"/></circle>
+    <circle cx="1240" cy="110" r="1.2" fill="#bde3ff" opacity="0.28"><animate attributeName="opacity" values="0.16;0.52;0.16" dur="6.2s" repeatCount="indefinite"/></circle>
+    <circle cx="1480" cy="230" r="1.0" fill="#7cc2ff" opacity="0.22"><animate attributeName="opacity" values="0.12;0.38;0.12" dur="8.4s" repeatCount="indefinite"/></circle>
+
+    <circle cx="-250" cy="520" r="1.1" fill="#8ecbff" opacity="0.24"><animate attributeName="opacity" values="0.14;0.4;0.14" dur="7.1s" repeatCount="indefinite"/></circle>
+    <circle cx="40" cy="430" r="1.5" fill="#5caeff" opacity="0.38"><animate attributeName="opacity" values="0.2;0.7;0.2" dur="5.1s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="640" r="1.0" fill="#cde9ff" opacity="0.2"><animate attributeName="opacity" values="0.1;0.32;0.1" dur="8.5s" repeatCount="indefinite"/></circle>
+    <circle cx="620" cy="470" r="1.2" fill="#69b6ff" opacity="0.3"><animate attributeName="opacity" values="0.18;0.56;0.18" dur="6.3s" repeatCount="indefinite"/></circle>
+    <circle cx="930" cy="690" r="1.4" fill="#4fa1ff" opacity="0.34"><animate attributeName="opacity" values="0.22;0.62;0.22" dur="5.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1160" cy="500" r="1.1" fill="#b0dcff" opacity="0.24"><animate attributeName="opacity" values="0.14;0.46;0.14" dur="6.9s" repeatCount="indefinite"/></circle>
+    <circle cx="1420" cy="620" r="0.9" fill="#73beff" opacity="0.2"><animate attributeName="opacity" values="0.1;0.32;0.1" dur="9.1s" repeatCount="indefinite"/></circle>
+
+    <polyline points="-140,300 -90,255 -30,285 25,210"
+              fill="none" stroke="#63afff" stroke-width="0.9" stroke-dasharray="28 220" opacity="0.22">
+      <animate attributeName="stroke-dashoffset" values="0;-248" dur="32s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.35;0.12" dur="32s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="940,120 980,165 1030,135 1085,210"
+              fill="none" stroke="#55a7ff" stroke-width="0.9" stroke-dasharray="30 240" opacity="0.25">
+      <animate attributeName="stroke-dashoffset" values="0;-270" dur="35s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.38;0.12" dur="35s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1220,520 1260,490 1305,525 1368,455"
+              fill="none" stroke="#6cb8ff" stroke-width="0.8" stroke-dasharray="28 220" opacity="0.2">
+      <animate attributeName="stroke-dashoffset" values="0;-248" dur="39s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="39s" repeatCount="indefinite"/>
+    </polyline>
+  </g>
+
+  <!-- ===== FULL CANVAS MOVING LINES (same pattern as core paths) ===== -->
+  <g fill="none" stroke="#22a2ff" stroke-width="1.18" filter="url(#lineGlow)">
+    <polyline points="-320,-250 -210,-140 -70,-240 90,-120 260,-210 430,-100 590,-200 770,-80 940,-190 1120,-70 1290,-160 1520,-20"
+              stroke-dasharray="120 2200" opacity="0.28">
+      <animate attributeName="stroke-dashoffset" values="0;-2320" dur="76s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.18;0.4;0.18" dur="76s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-320,170 -190,280 -30,180 130,300 300,190 470,320 650,210 830,340 1010,220 1180,350 1370,240 1520,330"
+              stroke-dasharray="110 2100" opacity="0.26">
+      <animate attributeName="stroke-dashoffset" values="0;-2210" dur="64s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.17;0.36;0.17" dur="64s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-320,500 -160,640 20,520 200,670 390,540 580,700 780,560 980,720 1180,580 1360,740 1520,620"
+              stroke-dasharray="110 2300" opacity="0.25">
+      <animate attributeName="stroke-dashoffset" values="0;-2410" dur="82s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.16;0.35;0.16" dur="82s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-320,860 -170,980 10,880 210,1020 420,900 640,1040 860,910 1070,1060 1270,930 1450,1080"
+              stroke-dasharray="120 2400" opacity="0.23">
+      <animate attributeName="stroke-dashoffset" values="0;-2520" dur="89s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.32;0.15" dur="89s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-260,-320 -160,-170 -240,-20 -120,120 -220,290 -80,430 -200,610 -40,760 -180,940 40,1120"
+              stroke-dasharray="90 1800" opacity="0.18">
+      <animate attributeName="stroke-dashoffset" values="0;-1890" dur="73s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.24;0.1" dur="73s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1460,-320 1320,-170 1420,-20 1280,140 1390,300 1230,470 1360,640 1180,810 1320,980 1120,1120"
+              stroke-dasharray="90 1800" opacity="0.18">
+      <animate attributeName="stroke-dashoffset" values="0;-1890" dur="80s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.24;0.1" dur="80s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-310,-340 -230,-240 -300,-110 -220,40 -290,180 -210,340 -280,520 -200,700 -260,900 -180,1120"
+              stroke-dasharray="85 1850" opacity="0.24">
+      <animate attributeName="stroke-dashoffset" values="0;-1935" dur="66s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.14;0.34;0.14" dur="66s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1530,-340 1450,-250 1510,-120 1430,30 1500,190 1420,360 1490,540 1410,720 1470,920 1390,1120"
+              stroke-dasharray="85 1850" opacity="0.24">
+      <animate attributeName="stroke-dashoffset" values="0;-1935" dur="69s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.14;0.34;0.14" dur="69s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-320,-80 -180,-10 -10,-70 180,10 380,-60 600,20 820,-50 1040,30 1260,-40 1520,20"
+              stroke-dasharray="100 2200" opacity="0.22">
+      <animate attributeName="stroke-dashoffset" values="0;-2300" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.3;0.12" dur="60s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-320,1080 -170,1020 0,1080 200,1010 420,1090 650,1000 880,1080 1120,1005 1360,1090 1520,1020"
+              stroke-dasharray="100 2200" opacity="0.22">
+      <animate attributeName="stroke-dashoffset" values="0;-2300" dur="62s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.3;0.12" dur="62s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-315,-330 -250,-280 -300,-230 -230,-180"
+              stroke-dasharray="36 320" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" values="0;-356" dur="38s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.62;0.25" dur="38s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1515,-330 1450,-280 1500,-230 1430,-180"
+              stroke-dasharray="36 320" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" values="0;-356" dur="39s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.62;0.25" dur="39s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="-315,1115 -250,1065 -300,1015 -230,965"
+              stroke-dasharray="36 320" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" values="0;-356" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.62;0.25" dur="41s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1515,1115 1450,1065 1500,1015 1430,965"
+              stroke-dasharray="36 320" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" values="0;-356" dur="42s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.62;0.25" dur="42s" repeatCount="indefinite"/>
+    </polyline>
+  </g>
+
+  <!-- ===== GLOBAL MOTION LAYER ===== -->
+  <g opacity="0.95">
+    <ellipse cx="600" cy="380" rx="760" ry="520" fill="url(#globalPulse)" opacity="0.46">
+      <animate attributeName="rx" values="680;900;680" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="460;620;460" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.24;0.54;0.24" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <circle cx="-180" cy="980" r="3.4" fill="#8fd3ff" opacity="0">
+      <animate attributeName="cx" values="-180;1620" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="980;-240" dur="41s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0.7;0" dur="41s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="1120" r="2.8" fill="#ffffff" opacity="0">
+      <animate attributeName="cx" values="60;1700" dur="54s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="1120;-300" dur="54s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0.55;0" dur="54s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1280" cy="1080" r="3.1" fill="#0070f3" opacity="0">
+      <animate attributeName="cx" values="1280;-260" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="1080;-260" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.62;0.62;0" dur="60s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1460" cy="840" r="2.4" fill="#ffffff" opacity="0">
+      <animate attributeName="cx" values="1460;-320" dur="47s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="840;40" dur="47s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.48;0.48;0" dur="47s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- extra roaming points covering corners and edges -->
+    <circle cx="-300" cy="-320" r="2.3" fill="#8fd3ff" opacity="0">
+      <animate attributeName="cx" values="-300;1580" dur="65s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-320;1120" dur="65s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.8;2.9;1.8" dur="5.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.72;0.72;0" dur="65s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1540" cy="-300" r="2.1" fill="#ffffff" opacity="0">
+      <animate attributeName="cx" values="1540;-320" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-300;1080" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.6;2.8;1.6" dur="4.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.66;0.66;0" dur="60s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-300" cy="1120" r="2.4" fill="#5caeff" opacity="0">
+      <animate attributeName="cx" values="-300;1600" dur="73s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="1120;-320" dur="73s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.7;3.1;1.7" dur="5.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.76;0.76;0" dur="73s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1560" cy="1120" r="2.2" fill="#ffffff" opacity="0">
+      <animate attributeName="cx" values="1560;-320" dur="69s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="1120;-260" dur="69s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="1.6;2.7;1.6" dur="5.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.65;0.65;0" dur="69s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-320" cy="420" r="1.9" fill="#7bc2ff" opacity="0">
+      <animate attributeName="cx" values="-320;1580" dur="54s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="420;560" dur="54s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0.5;0" dur="54s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1580" cy="340" r="2" fill="#6cb8ff" opacity="0">
+      <animate attributeName="cx" values="1580;-320" dur="56s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="340;520" dur="56s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0.5;0" dur="56s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="-340" r="1.8" fill="#9bd6ff" opacity="0">
+      <animate attributeName="cx" values="520;760" dur="50s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-340;1140" dur="50s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.52;0.52;0" dur="50s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="1140" r="1.8" fill="#9bd6ff" opacity="0">
+      <animate attributeName="cx" values="720;480" dur="53s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="1140;-340" dur="53s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.52;0.52;0" dur="53s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- anchored corner/edge pulses to avoid empty zones -->
+    <circle cx="-300" cy="-330" r="2.3" fill="#2aa9ff" opacity="0.48">
+      <animate attributeName="r" values="2.3;3.9;2.3" dur="4.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.36;0.86;0.36" dur="4.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1510" cy="-330" r="2.3" fill="#2aa9ff" opacity="0.48">
+      <animate attributeName="r" values="2.3;3.9;2.3" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.36;0.86;0.36" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-300" cy="1120" r="2.3" fill="#2aa9ff" opacity="0.48">
+      <animate attributeName="r" values="2.3;3.9;2.3" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.36;0.86;0.36" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1510" cy="1120" r="2.3" fill="#2aa9ff" opacity="0.48">
+      <animate attributeName="r" values="2.3;3.9;2.3" dur="5.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.36;0.86;0.36" dur="5.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-310" cy="360" r="1.8" fill="#b3e4ff" opacity="0.4">
+      <animate attributeName="r" values="1.8;3.1;1.8" dur="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.28;0.64;0.28" dur="6.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1520" cy="360" r="1.8" fill="#b3e4ff" opacity="0.4">
+      <animate attributeName="r" values="1.8;3.1;1.8" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.28;0.64;0.28" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g transform="translate(100 208) translate(500 172) scale(1.88) translate(-500 -172)">
+
+  <!-- ===== CONSTELLATION NETWORK ===== -->
+  <!-- Static base lines (hidden, only traveling light visible) -->
+  <g opacity="0" stroke="#0070f3" stroke-width="0.7" fill="none">
+    <!-- Left cluster -->
+    <line x1="55" y1="70" x2="170" y2="140"/>
+    <line x1="170" y1="140" x2="90" y2="240"/>
+    <line x1="170" y1="140" x2="260" y2="190"/>
+    <line x1="55" y1="70" x2="210" y2="55"/>
+    <line x1="210" y1="55" x2="330" y2="110"/>
+    <line x1="260" y1="190" x2="330" y2="110"/>
+    <line x1="90" y1="240" x2="190" y2="320"/>
+    <line x1="260" y1="190" x2="360" y2="270"/>
+    <line x1="190" y1="320" x2="360" y2="270"/>
+    <line x1="360" y1="270" x2="360" y2="340"/>
+    <line x1="330" y1="110" x2="410" y2="50"/>
+    <!-- Right cluster -->
+    <line x1="690" y1="90" x2="760" y2="190"/>
+    <line x1="690" y1="90" x2="810" y2="55"/>
+    <line x1="810" y1="55" x2="925" y2="110"/>
+    <line x1="925" y1="110" x2="860" y2="175"/>
+    <line x1="860" y1="175" x2="760" y2="190"/>
+    <line x1="860" y1="175" x2="955" y2="245"/>
+    <line x1="760" y1="190" x2="660" y2="275"/>
+    <line x1="660" y1="275" x2="790" y2="335"/>
+    <line x1="955" y1="245" x2="910" y2="295"/>
+    <line x1="910" y1="295" x2="790" y2="335"/>
+    <line x1="690" y1="90" x2="600" y2="45"/>
+    <line x1="660" y1="275" x2="640" y2="345"/>
+  </g>
+
+  <!-- Traveling-light lines LEFT (glowing dash sweeps along the paths) -->
+  <g fill="none" stroke="#0070f3" stroke-width="0.95" filter="url(#lineGlow)">
+    <!-- Path L1 -->
+    <polyline points="55,70 170,140 260,190 330,110 210,55 55,70"
+              stroke-dasharray="60 600" opacity="0.2">
+      <animate attributeName="stroke-dashoffset" values="0;-640" dur="38s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="38s" repeatCount="indefinite"/>
+    </polyline>
+    <!-- Path L2 -->
+    <polyline points="90,240 170,140 330,110 410,50"
+              stroke-dasharray="55 500" opacity="0.18">
+      <animate attributeName="stroke-dashoffset" values="0;-530" dur="50s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="50s" repeatCount="indefinite"/>
+    </polyline>
+    <!-- Path L3 -->
+    <polyline points="190,320 90,240 260,190 360,270 190,320"
+              stroke-dasharray="55 550" opacity="0.18">
+      <animate attributeName="stroke-dashoffset" values="0;-585" dur="60s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="60s" repeatCount="indefinite"/>
+    </polyline>
+  </g>
+
+  <!-- Traveling-light lines RIGHT -->
+  <g fill="none" stroke="#0070f3" stroke-width="0.95" filter="url(#lineGlow)">
+    <!-- Path R1 -->
+    <polyline points="600,45 690,90 810,55 925,110 860,175 760,190 690,90"
+              stroke-dasharray="60 700" opacity="0.2">
+      <animate attributeName="stroke-dashoffset" values="0;-740" dur="44s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="44s" repeatCount="indefinite"/>
+    </polyline>
+    <!-- Path R2 -->
+    <polyline points="760,190 660,275 790,335 910,295 955,245 860,175"
+              stroke-dasharray="55 600" opacity="0.18">
+      <animate attributeName="stroke-dashoffset" values="0;-635" dur="56s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.25;0.12" dur="56s" repeatCount="indefinite"/>
+    </polyline>
+    <!-- Path R3 -->
+    <polyline points="660,275 640,345" stroke-dasharray="40 200" opacity="0.15">
+      <animate attributeName="stroke-dashoffset" values="0;-220" dur="32s" repeatCount="indefinite"/>
+    </polyline>
+  </g>
+
+  <!-- Constellation nodes (dots) with pulse -->
+  <g>
+    <!-- LEFT CLUSTER -->
+    <circle cx="55" cy="70" r="2" fill="#0070f3" opacity="0.55">
+      <animate attributeName="r" values="2;3.5;2" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0.25;0.55" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="140" r="2.5" fill="#0070f3" opacity="0.6">
+      <animate attributeName="r" values="2.5;4;2.5" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="240" r="1.8" fill="#fff" opacity="0.4">
+      <animate attributeName="r" values="1.8;3;1.8" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.18;0.4" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="210" cy="55" r="1.8" fill="#0070f3" opacity="0.45">
+      <animate attributeName="r" values="1.8;3;1.8" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.2;0.45" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="190" r="2.2" fill="#fff" opacity="0.42">
+      <animate attributeName="r" values="2.2;3.5;2.2" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.42;0.18;0.42" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="110" r="2" fill="#0070f3" opacity="0.5">
+      <animate attributeName="r" values="2;3.5;2" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="190" cy="320" r="1.8" fill="#fff" opacity="0.35">
+      <animate attributeName="r" values="1.8;3;1.8" dur="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="6.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="270" r="1.8" fill="#0070f3" opacity="0.4">
+      <animate attributeName="r" values="1.8;3;1.8" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.18;0.4" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="410" cy="50" r="1.5" fill="#fff" opacity="0.3">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.12;0.3" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="340" r="1.5" fill="#0070f3" opacity="0.25">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.1;0.25" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <!-- RIGHT CLUSTER -->
+    <circle cx="690" cy="90" r="2.2" fill="#0070f3" opacity="0.55">
+      <animate attributeName="r" values="2.2;3.5;2.2" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0.25;0.55" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="760" cy="190" r="2.5" fill="#fff" opacity="0.45">
+      <animate attributeName="r" values="2.5;4;2.5" dur="5.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.2;0.45" dur="5.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="810" cy="55" r="1.8" fill="#0070f3" opacity="0.42">
+      <animate attributeName="r" values="1.8;3;1.8" dur="4.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.42;0.18;0.42" dur="4.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="925" cy="110" r="2" fill="#fff" opacity="0.4">
+      <animate attributeName="r" values="2;3.5;2" dur="5.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.18;0.4" dur="5.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="860" cy="175" r="2" fill="#0070f3" opacity="0.5">
+      <animate attributeName="r" values="2;3.5;2" dur="4.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="4.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="955" cy="245" r="1.8" fill="#fff" opacity="0.35">
+      <animate attributeName="r" values="1.8;3;1.8" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.15;0.35" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="660" cy="275" r="1.8" fill="#0070f3" opacity="0.42">
+      <animate attributeName="r" values="1.8;3;1.8" dur="5.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.42;0.18;0.42" dur="5.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="790" cy="335" r="1.8" fill="#fff" opacity="0.32">
+      <animate attributeName="r" values="1.8;2.8;1.8" dur="6.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.32;0.12;0.32" dur="6.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="910" cy="295" r="1.6" fill="#0070f3" opacity="0.4">
+      <animate attributeName="r" values="1.6;2.8;1.6" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.15;0.4" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="45" r="1.5" fill="#fff" opacity="0.3">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="4.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.12;0.3" dur="4.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="345" r="1.5" fill="#0070f3" opacity="0.25">
+      <animate attributeName="r" values="1.5;2.5;1.5" dur="7.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.1;0.25" dur="7.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== STAR FIELD (twinkling) ===== -->
+  <circle cx="45" cy="32" r="1" fill="#fff" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="142" cy="78" r="0.7" fill="#fff" opacity="0.35"><animate attributeName="opacity" values="0.35;0.08;0.35" dur="4.8s" repeatCount="indefinite"/></circle>
+  <circle cx="233" cy="22" r="0.8" fill="#fff" opacity="0.4"><animate attributeName="opacity" values="0.4;0.08;0.4" dur="5.5s" repeatCount="indefinite"/></circle>
+  <circle cx="310" cy="95" r="0.6" fill="#0070f3" opacity="0.4"><animate attributeName="opacity" values="0.4;0.08;0.4" dur="3.8s" repeatCount="indefinite"/></circle>
+  <circle cx="420" cy="45" r="0.9" fill="#fff" opacity="0.38"><animate attributeName="opacity" values="0.38;0.08;0.38" dur="6.1s" repeatCount="indefinite"/></circle>
+  <circle cx="575" cy="30" r="0.7" fill="#fff" opacity="0.42"><animate attributeName="opacity" values="0.42;0.1;0.42" dur="4.2s" repeatCount="indefinite"/></circle>
+  <circle cx="660" cy="68" r="0.8" fill="#0070f3" opacity="0.38"><animate attributeName="opacity" values="0.38;0.08;0.38" dur="5.9s" repeatCount="indefinite"/></circle>
+  <circle cx="780" cy="25" r="0.7" fill="#fff" opacity="0.45"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="3.5s" repeatCount="indefinite"/></circle>
+  <circle cx="870" cy="85" r="0.9" fill="#fff" opacity="0.35"><animate attributeName="opacity" values="0.35;0.08;0.35" dur="7.2s" repeatCount="indefinite"/></circle>
+  <circle cx="950" cy="42" r="0.6" fill="#0070f3" opacity="0.28"><animate attributeName="opacity" values="0.28;0.05;0.28" dur="4.6s" repeatCount="indefinite"/></circle>
+  <circle cx="88" cy="330" r="0.8" fill="#fff" opacity="0.28"><animate attributeName="opacity" values="0.28;0.06;0.28" dur="5.1s" repeatCount="indefinite"/></circle>
+  <circle cx="195" cy="365" r="0.7" fill="#fff" opacity="0.38"><animate attributeName="opacity" values="0.38;0.08;0.38" dur="6.6s" repeatCount="indefinite"/></circle>
+  <circle cx="340" cy="350" r="0.6" fill="#0070f3" opacity="0.3"><animate attributeName="opacity" values="0.3;0.06;0.3" dur="4.1s" repeatCount="indefinite"/></circle>
+  <circle cx="680" cy="345" r="0.8" fill="#fff" opacity="0.35"><animate attributeName="opacity" values="0.35;0.08;0.35" dur="5.7s" repeatCount="indefinite"/></circle>
+  <circle cx="810" cy="370" r="0.7" fill="#fff" opacity="0.4"><animate attributeName="opacity" values="0.4;0.08;0.4" dur="3.9s" repeatCount="indefinite"/></circle>
+  <circle cx="920" cy="355" r="0.9" fill="#0070f3" opacity="0.25"><animate attributeName="opacity" values="0.25;0.05;0.25" dur="7.8s" repeatCount="indefinite"/></circle>
+  <!-- extra scattered stars -->
+  <circle cx="72" cy="180" r="0.5" fill="#fff" opacity="0.25"><animate attributeName="opacity" values="0.25;0.05;0.25" dur="8.3s" repeatCount="indefinite"/></circle>
+  <circle cx="155" cy="240" r="0.6" fill="#fff" opacity="0.2"><animate attributeName="opacity" values="0.2;0.04;0.2" dur="6.9s" repeatCount="indefinite"/></circle>
+  <circle cx="850" cy="200" r="0.5" fill="#fff" opacity="0.22"><animate attributeName="opacity" values="0.22;0.04;0.22" dur="5.3s" repeatCount="indefinite"/></circle>
+  <circle cx="930" cy="260" r="0.4" fill="#0070f3" opacity="0.07"><animate attributeName="opacity" values="0.07;0.01;0.07" dur="7.1s" repeatCount="indefinite"/></circle>
+
+  <!-- ===== RISING PARTICLES (bubbles) ===== -->
+  <circle cx="100" cy="400" r="1.5" fill="#fff" opacity="0"><animate attributeName="cy" values="420;-20" dur="50s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.4;0.4;0" dur="50s" repeatCount="indefinite"/></circle>
+  <circle cx="270" cy="400" r="1.8" fill="#0070f3" opacity="0"><animate attributeName="cy" values="430;-20" dur="60s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.38;0.38;0" dur="60s" repeatCount="indefinite"/></circle>
+  <circle cx="400" cy="400" r="1.3" fill="#fff" opacity="0"><animate attributeName="cy" values="415;-15" dur="69s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.35;0.35;0" dur="69s" repeatCount="indefinite"/></circle>
+  <circle cx="610" cy="400" r="1.2" fill="#fff" opacity="0"><animate attributeName="cy" values="425;-10" dur="64s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.32;0.32;0" dur="64s" repeatCount="indefinite"/></circle>
+  <circle cx="740" cy="400" r="1.6" fill="#0070f3" opacity="0"><animate attributeName="cy" values="410;-20" dur="54s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.38;0.38;0" dur="54s" repeatCount="indefinite"/></circle>
+  <circle cx="890" cy="400" r="1.4" fill="#fff" opacity="0"><animate attributeName="cy" values="420;-15" dur="75s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.32;0.32;0" dur="75s" repeatCount="indefinite"/></circle>
+  <!-- extra bubbles -->
+  <circle cx="50" cy="400" r="1" fill="#0070f3" opacity="0"><animate attributeName="cy" values="430;-15" dur="66s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.35;0.35;0" dur="66s" repeatCount="indefinite"/></circle>
+  <circle cx="180" cy="400" r="0.9" fill="#fff" opacity="0"><animate attributeName="cy" values="440;-10" dur="80s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.3;0.3;0" dur="80s" repeatCount="indefinite"/></circle>
+  <circle cx="330" cy="400" r="1.3" fill="#0070f3" opacity="0"><animate attributeName="cy" values="425;-20" dur="56s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.35;0.35;0" dur="56s" repeatCount="indefinite"/></circle>
+  <circle cx="470" cy="400" r="1" fill="#fff" opacity="0"><animate attributeName="cy" values="435;-10" dur="73s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.3;0.3;0" dur="73s" repeatCount="indefinite"/></circle>
+  <circle cx="530" cy="400" r="0.8" fill="#0070f3" opacity="0"><animate attributeName="cy" values="445;-10" dur="86s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.28;0.28;0" dur="86s" repeatCount="indefinite"/></circle>
+  <circle cx="670" cy="400" r="1.1" fill="#fff" opacity="0"><animate attributeName="cy" values="420;-15" dur="64s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.32;0.32;0" dur="64s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="400" r="0.9" fill="#fff" opacity="0"><animate attributeName="cy" values="435;-15" dur="82s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.25;0.25;0" dur="82s" repeatCount="indefinite"/></circle>
+  <circle cx="950" cy="400" r="1.3" fill="#0070f3" opacity="0"><animate attributeName="cy" values="410;-20" dur="47s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.35;0.35;0" dur="47s" repeatCount="indefinite"/></circle>
+
+  <!-- ===== OUTER HALO (wide ambient glow) ===== -->
+  <ellipse cx="500" cy="155" rx="270" ry="220" fill="url(#haloOuter)">
+    <animate attributeName="rx" values="230;280;230" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="ry" values="180;220;180" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </ellipse>
+
+  <!-- ===== BREATHING HALO (inner, intense) ===== -->
+  <ellipse cx="500" cy="155" rx="158" ry="158" fill="url(#halo)">
+    <animate attributeName="rx" values="120;180;120" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="ry" values="120;180;120" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </ellipse>
+
+  <!-- ===== ORBIT RINGS ===== -->
+  <!-- Ring 1: slow clockwise, dashed -->
+    <circle cx="500" cy="155" r="126" fill="none" stroke="#0070f3" stroke-width="0.88"
+      stroke-dasharray="3 18" opacity="0.24">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 500 155" to="360 500 155" dur="40s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.15;0.08;0.15" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Ring 2: counter-clockwise, tilted feel via ellipse -->
+  <ellipse cx="500" cy="155" rx="150" ry="108" fill="none" stroke="#0070f3" stroke-width="0.62"
+           stroke-dasharray="2 25" opacity="0.16">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="360 500 155" to="0 500 155" dur="55s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Ring 3: fast, tight -->
+    <circle cx="500" cy="155" r="108" fill="none" stroke="#0070f3" stroke-width="0.48"
+      stroke-dasharray="1 30" opacity="0.18">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 500 155" to="360 500 155" dur="25s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ===== ORBITING DOTS ===== -->
+  <g opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 500 155" to="360 500 155" dur="15s" repeatCount="indefinite"/>
+    <circle cx="500" cy="50" r="2" fill="#0070f3" opacity="0.7">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g opacity="0.62">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="120 500 155" to="480 500 155" dur="22s" repeatCount="indefinite"/>
+    <circle cx="500" cy="38" r="1.5" fill="#ffffff" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.15;0.5" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g opacity="0.58">
+    <animateTransform attributeName="transform" type="rotate"
+                      from="240 500 155" to="600 500 155" dur="30s" repeatCount="indefinite"/>
+    <circle cx="500" cy="44" r="1.2" fill="#0070f3" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ===== AMBIENT PULSE RINGS ===== -->
+  <circle cx="500" cy="155" r="108" fill="none" stroke="#0070f3" stroke-width="0.78" opacity="0.14">
+    <animate attributeName="r" values="108;175;108" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.14;0.03;0.14" dur="8s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </circle>
+  <circle cx="500" cy="155" r="108" fill="none" stroke="#0070f3" stroke-width="0.5" opacity="0.1">
+    <animate attributeName="r" values="108;208;108" dur="8s" begin="1.5s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    <animate attributeName="opacity" values="0.1;0.01;0.1" dur="8s" begin="1.5s" repeatCount="indefinite"
+             calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </circle>
+
+  <!-- ===== NEXT.JS LOGO ===== -->
+  <g opacity="0" transform="translate(500 155) scale(1.28) translate(-500 -155)">
+    <animate attributeName="opacity" from="0" to="1" dur="1.5s" fill="freeze"/>
+
+    <!-- Logo inner glow (breathing) -->
+    <circle cx="500" cy="155" r="106" fill="url(#logoGlow)" opacity="0.95">
+      <animate attributeName="r" values="106;122;106" dur="4s" repeatCount="indefinite"
+               calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+      <animate attributeName="opacity" values="0.95;0.45;0.95" dur="4s" repeatCount="indefinite"
+               calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    </circle>
+
+    <!-- Outer circle (black fill + white stroke like official logo) -->
+    <circle cx="500" cy="155" r="106" fill="#000000" stroke="#ffffff" stroke-width="2.8"/>
+
+    <!-- Inner blue ambient glow (always visible, subtle pulse) -->
+    <circle cx="500" cy="155" r="101" fill="none" stroke="#0070f3" stroke-width="6" opacity="0.16">
+      <animate attributeName="stroke-width" values="6;11;6" dur="4s" repeatCount="indefinite"
+               calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+      <animate attributeName="opacity" values="0.16;0.28;0.16" dur="4s" repeatCount="indefinite"
+               calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+    </circle>
+
+    <!-- N letterform clipped to circle (official Next.js geometry) -->
+    <g clip-path="url(#nClip)" transform="translate(500 155) scale(1.28) translate(-500 -155)">
+      <!-- Left vertical bar (solid white) -->
+      <polygon points="469.6,124.6 479.83,124.6 479.83,185.37 469.6,185.37" fill="#ffffff"/>
+
+      <!-- Diagonal: bottom-left → top-right with gradient fade -->
+      <polygon points="479.83,137.59 482.39,124.6 550.24,212.01 542.21,218.19" fill="url(#diagFade)"/>
+
+      <!-- Right vertical bar with fade -->
+      <polygon points="521.11,164.15 531.24,177.2 531.24,124.6 521.11,124.6" fill="url(#rightBarFade)"/>
+    </g>
+  </g>
+
+  <!-- ===== SEPARATOR ===== -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1.8s" fill="freeze"/>
+    <rect x="360" y="310" width="280" height="8" rx="4" fill="url(#lineAura)" filter="url(#separatorBloom)" opacity="0.16">
+      <animate attributeName="opacity" values="0.12;0.22;0.12" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="380" y="314.3" width="240" height="0.6" fill="url(#lineFade)" opacity="0.82">
+      <animate attributeName="opacity" values="0.74;1;0.74" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ===== TEXT: FULL STACK NEXT.JS ===== -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1.2s" begin="1.5s" fill="freeze"/>
+    <text x="500" y="356" text-anchor="middle" fill="#ffffff"
+          font-family="'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+          font-size="19" font-weight="600" letter-spacing="10">
+      FULL STACK NEXT.JS
+    </text>
+  </g>
+
+  <!-- ===== TEXT UNDERLINE GLOW ===== -->
+  <rect x="400" y="364" width="200" height="1" fill="url(#textGlow)" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.5" dur="1s" begin="2.2s" fill="freeze"/>
+  </rect>
+  </g>
+</svg>
