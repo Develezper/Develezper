@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" width="860" height="320" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub Metrics placeholder light</title>
+  <desc id="desc">Tarjeta temporal mientras se genera el panel real de GitHub Metrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff" />
+      <stop offset="100%" stop-color="#eef6ff" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0070f3" stop-opacity="0" />
+      <stop offset="50%" stop-color="#2196ff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0070f3" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="860" height="320" rx="24" fill="url(#bg)" />
+  <rect x="18" y="18" width="824" height="284" rx="18" fill="none" stroke="#cfe5ff" />
+  <line x1="64" y1="94" x2="796" y2="94" stroke="url(#line)" />
+
+  <text x="64" y="70" fill="#0b1b30" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">
+    GitHub Metrics
+  </text>
+  <text x="64" y="138" fill="#1565c0" font-family="Segoe UI, Arial, sans-serif" font-size="21">
+    Placeholder temporal
+  </text>
+  <text x="64" y="178" fill="#1f3d5c" font-family="Segoe UI, Arial, sans-serif" font-size="18">
+    El panel real se generara automaticamente cuando configures
+  </text>
+  <text x="64" y="208" fill="#1f3d5c" font-family="Segoe UI, Arial, sans-serif" font-size="18">
+    el secret METRICS_TOKEN y ejecutes el workflow de GitHub Actions.
+  </text>
+
+  <rect x="64" y="236" width="240" height="42" rx="21" fill="#0070f3" fill-opacity="0.08" stroke="#0070f3" />
+  <text x="88" y="263" fill="#0b1b30" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="600">
+    waiting for GitHub Actions
+  </text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" width="620" height="280" role="img" aria-labelledby="title desc">
+  <title id="title">Top languages placeholder light</title>
+  <desc id="desc">Tarjeta temporal para lenguajes mas usados.</desc>
+  <rect width="620" height="280" rx="24" fill="#f8fbff" />
+  <rect x="18" y="18" width="584" height="244" rx="18" fill="none" stroke="#cfe5ff" />
+  <text x="46" y="62" fill="#0b1b30" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">
+    Top Languages
+  </text>
+  <text x="46" y="96" fill="#1565c0" font-family="Segoe UI, Arial, sans-serif" font-size="17">
+    Se generara al correr el workflow de metrics.
+  </text>
+
+  <rect x="46" y="132" width="420" height="16" rx="8" fill="#e8f2ff" />
+  <rect x="46" y="132" width="178" height="16" rx="8" fill="#0070f3" />
+  <rect x="46" y="164" width="420" height="16" rx="8" fill="#e8f2ff" />
+  <rect x="46" y="164" width="126" height="16" rx="8" fill="#2196ff" />
+  <rect x="46" y="196" width="420" height="16" rx="8" fill="#e8f2ff" />
+  <rect x="46" y="196" width="88" height="16" rx="8" fill="#64b5f6" />
+
+  <text x="486" y="145" fill="#1f3d5c" font-family="Segoe UI, Arial, sans-serif" font-size="15">waiting</text>
+  <text x="486" y="177" fill="#1f3d5c" font-family="Segoe UI, Arial, sans-serif" font-size="15">for</text>
+  <text x="486" y="209" fill="#1f3d5c" font-family="Segoe UI, Arial, sans-serif" font-size="15">data</text>
+</svg>
