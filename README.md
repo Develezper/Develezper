@@ -42,9 +42,9 @@ Within the **Microsoft Azure ecosystem**, I design, deploy, manage, and scale pr
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/night.svg?v=20260414-1" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-1" />
-    <img src="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-1" alt="3D GitHub contribution graph generated from real activity" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/night.svg?v=20260414-2" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-2" />
+    <img src="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-2" alt="3D GitHub contribution graph generated from real activity" width="100%" />
   </picture>
 </p>
 

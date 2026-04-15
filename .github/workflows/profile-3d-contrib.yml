@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "0 5 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: profile-3d-contrib
+  cancel-in-progress: true
 
 permissions:
   contents: write
