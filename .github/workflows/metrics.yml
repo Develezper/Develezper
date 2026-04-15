@@ -38,9 +38,7 @@ jobs:
 
           # Fondo transparente para integrarse con el perfil
           extras_css: |
-            :root { --color-calendar-graph-day-L4-bg: #0070f3; --color-calendar-graph-day-L3-bg: #2196ff; --color-calendar-graph-day-L2-bg: #1565c0; --color-calendar-graph-day-L1-bg: #0d47a1; }
             svg { background: transparent; }
-            .isocalendar svg { color: #0070f3; }
 
   # ── Calendario semestral + habitos (modo claro) ──
   semestral-light:
@@ -69,6 +67,4 @@ jobs:
           plugin_habits_trim: yes
 
           extras_css: |
-            :root { --color-calendar-graph-day-L4-bg: #0070f3; --color-calendar-graph-day-L3-bg: #2196ff; --color-calendar-graph-day-L2-bg: #1565c0; --color-calendar-graph-day-L1-bg: #0d47a1; }
             svg { background: transparent; }
-            .isocalendar svg { color: #0070f3; }
