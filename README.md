@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./banner-nextjs.svg?v=20260414-3" />
-    <source media="(prefers-color-scheme: light)" srcset="./banner-nextjs-light.svg?v=20260414-3" />
-    <img src="./banner-nextjs.svg?v=20260414-3" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./banner-nextjs.svg?v=20260414-4" />
+    <source media="(prefers-color-scheme: light)" srcset="./banner-nextjs-light.svg?v=20260414-4" />
+    <img src="./banner-nextjs.svg?v=20260414-4" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
   </picture>
 </p>
 
