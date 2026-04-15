@@ -387,7 +387,7 @@
   </circle>
 
   <!-- ===== NEXT.JS LOGO ===== -->
-  <g opacity="0">
+  <g opacity="0" transform="translate(500 155) scale(1.18) translate(-500 -155)">
     <animate attributeName="opacity" from="0" to="1" dur="1.5s" fill="freeze"/>
 
     <!-- Logo inner glow (breathing) -->
