@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-theme-fix" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
+  <img src="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-white-mode-text-fix" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
 </p>
 
 ## **Juan Pablo Velez**
