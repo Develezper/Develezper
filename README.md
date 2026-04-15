@@ -1,9 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./banner-nextjs-ultra.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./banner-nextjs-ultra-light.svg" />
-    <img src="./banner-nextjs-ultra.svg" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
-  </picture>
+  <img src="./banner-nextjs-ultra.svg" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
 </p>
 
 ## **Juan Pablo Velez**
@@ -14,6 +10,10 @@
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Microsoft Azure" />
+  <img src="https://img.shields.io/badge/Applied_AI-LLMs%20%26%20Agents-0f172a?style=for-the-badge&color=0ea5e9" alt="Applied AI" />
 </p>
 
 I turn complex ideas into **high-impact technology solutions**. My work spans the full product lifecycle, from designing hybrid data architectures and building robust APIs to integrating advanced artificial intelligence and delivering professional cloud deployments.
@@ -34,6 +34,10 @@ Within the **Microsoft Azure ecosystem**, I design, deploy, manage, and scale pr
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Microsoft Azure" />
+  <img src="https://img.shields.io/badge/Applied_AI-LLMs%20%26%20Agents-0f172a?style=for-the-badge&color=0ea5e9" alt="Applied AI" />
 </p>
 
 **What I Focus On**
