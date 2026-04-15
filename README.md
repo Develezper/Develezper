@@ -42,14 +42,6 @@ Within the **Microsoft Azure ecosystem**, I design, deploy, manage, and scale pr
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/night.svg?v=20260414-2" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-2" />
-    <img src="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-2" alt="3D GitHub contribution graph generated from real activity" width="100%" />
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./github-metrics.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./github-metrics-light.svg" />
     <img src="./github-metrics.svg" alt="GitHub Metrics — Contribution habits and activity overview" width="82%" />
