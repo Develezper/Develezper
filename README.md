@@ -38,12 +38,28 @@ Within the **Microsoft Azure ecosystem**, I design, deploy, manage, and scale pr
 
 ---
 
-### GitHub Metrics
+### Live GitHub Metrics
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/night.svg?v=20260414-1" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-1" />
+    <img src="https://raw.githubusercontent.com/Develezper/Develezper/output-3d-contrib/day.svg?v=20260414-1" alt="3D GitHub contribution graph generated from real activity" width="100%" />
+  </picture>
+</p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./github-metrics.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./github-metrics-light.svg" />
     <img src="./github-metrics.svg" alt="GitHub Metrics — Contribution habits and activity overview" width="82%" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./github-languages.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./github-languages-light.svg" />
+    <img src="./github-languages.svg" alt="GitHub Languages — Most used languages based on repository analysis" width="82%" />
   </picture>
 </p>
