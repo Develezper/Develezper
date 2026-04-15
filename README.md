@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3-dark.svg?v=20260415-dark-light-split" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-dark-light-split" />
-    <img src="https://raw.githubusercontent.com/Develezper/DeVelezper/main/banner-nextjs-ultra-center-v3.svg?v=20260415-dark-light-split" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./banner-nextjs-ultra-center-v3-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./banner-nextjs-ultra-center-v3.svg" />
+    <img src="./banner-nextjs-ultra-center-v3.svg" alt="Full Stack Next.js — Juan Pablo Velez" width="100%" />
   </picture>
 </p>
 
