@@ -7,13 +7,15 @@
 </p>
 
 ## **Juan Pablo Velez**
-**Full Stack Engineer | Frontend, Backend & Scalable Systems**
+**Full Stack Engineer | AI Architect | Microsoft Azure**
 
-I design and build **end-to-end web applications** with equal attention to frontend quality and backend reliability, focusing on architecture, scalability, security, and long-term maintainability.
+I turn complex ideas into **high-impact technology solutions**. My work spans the full product lifecycle, from designing hybrid data architectures and building robust APIs to integrating advanced artificial intelligence and delivering professional cloud deployments.
 
-My work combines **high-quality user interfaces** with solid backend foundations: clear system design, clean code organization, dependable APIs, and engineering decisions that remain strong as products evolve and complexity increases.
+My technical ecosystem is built for **scalability, security, and intelligence**. I specialize in **Next.js, React, TypeScript, and Tailwind CSS**, using the full stack capabilities of the framework to build efficient, secure, and scalable business logic from the server outward.
 
-I primarily work with **Next.js, React, TypeScript, and modern web technologies** to deliver products that are fast for users, reliable in production, and structured for growth. This profile reflects the way I build: with strong engineering principles, thoughtful architecture, and consistent execution.
+I work across **relational and non-relational data architectures**, using **MySQL and MongoDB** to balance flexibility, performance, and data integrity based on each project's needs. I also implement **advanced AI solutions** with LLMs, intelligent agents, and automation workflows that turn data into strategic decisions.
+
+Within the **Microsoft Azure ecosystem**, I design, deploy, manage, and scale production-grade applications with a strong focus on security, performance, and availability. This profile reflects my commitment to engineering excellence: clean interfaces backed by powerful logic, intelligent systems, and a mindset of continuous improvement.
 
 ---
 
@@ -29,10 +31,10 @@ I primarily work with **Next.js, React, TypeScript, and modern web technologies*
 
 **What I Focus On**
 
-- Building fast, solid, and maintainable interfaces with Next.js and React.
-- Writing scalable and reliable code with TypeScript.
-- Designing clean, consistent, and responsive UI systems with Tailwind CSS.
-- Raising product quality through technical clarity, consistency, and continuous refinement.
+- Building full stack applications with Next.js, React, TypeScript, and Tailwind CSS.
+- Designing hybrid data architectures with MySQL and MongoDB.
+- Integrating LLMs, intelligent agents, and automation workflows into real products.
+- Deploying and scaling secure, high-performance applications on Microsoft Azure.
 
 ---
 
