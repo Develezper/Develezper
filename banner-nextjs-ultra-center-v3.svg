@@ -51,6 +51,11 @@
       <stop offset="50%" stop-color="#0070f3" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="lineAura" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fcfff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4aa6ff" stop-opacity="0.48"/>
+      <stop offset="100%" stop-color="#8fcfff" stop-opacity="0"/>
+    </linearGradient>
     <!-- Text underline glow -->
     <linearGradient id="textGlow" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
@@ -83,6 +88,13 @@
       <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="separatorBloom" x="-60%" y="-800%" width="220%" height="1700%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5.8" result="soft"/>
+      <feMerge>
+        <feMergeNode in="soft"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
@@ -630,9 +642,15 @@
   </g>
 
   <!-- ===== SEPARATOR ===== -->
-  <rect x="380" y="314" width="240" height="1" fill="url(#lineFade)" opacity="0">
-    <animate attributeName="opacity" from="0" to="0.8" dur="1s" begin="1.8s" fill="freeze"/>
-  </rect>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1.8s" fill="freeze"/>
+    <rect x="360" y="306" width="280" height="16" rx="8" fill="url(#lineAura)" filter="url(#separatorBloom)" opacity="0.26">
+      <animate attributeName="opacity" values="0.2;0.34;0.2" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="380" y="314" width="240" height="1.2" fill="url(#lineFade)" opacity="0.86">
+      <animate attributeName="opacity" values="0.74;1;0.74" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- ===== TEXT: FULL STACK NEXT.JS ===== -->
   <g opacity="0">
