@@ -93,7 +93,7 @@
   </defs>
 
   <!-- ===== BACKGROUND ===== -->
-  <rect width="1000" height="400" fill="#000000"/>
+  <rect width="1000" height="400" fill="none"/>
 
   <!-- ===== CONSTELLATION NETWORK ===== -->
   <!-- Static base lines (hidden, only traveling light visible) -->
