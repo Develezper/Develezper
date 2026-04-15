@@ -95,7 +95,7 @@
   <!-- ===== BACKGROUND ===== -->
   <rect x="-320" y="-360" width="1840" height="1480" fill="none"/>
 
-  <g transform="translate(0 340) translate(500 172) scale(1.88) translate(-500 -172)">
+  <g transform="translate(100 208) translate(500 172) scale(1.88) translate(-500 -172)">
 
   <!-- ===== CONSTELLATION NETWORK ===== -->
   <!-- Static base lines (hidden, only traveling light visible) -->
