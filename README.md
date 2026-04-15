@@ -7,17 +7,17 @@
 </p>
 
 ## **Juan Pablo Velez**
-**Full Stack Developer | Next.js | React | TypeScript**
+**Full Stack Engineer | Next.js | React | TypeScript**
 
-I am a **Full Stack Developer** focused on building **modern, scalable, and maintainable web applications** with special attention to **frontend experience, clean architecture, and solid implementation details**.
+Desarrollo productos web de extremo a extremo con foco en **rendimiento, escalabilidad y experiencia de usuario**, cuidando tanto la solidez técnica de la arquitectura como la calidad visual de la interfaz.
 
-I enjoy working with **Next.js, React, TypeScript, and Tailwind CSS**, creating products that balance **performance, clarity, and visual quality**.
+Mi enfoque combina **frontend de alto nivel**, implementación rigurosa y una forma de construir orientada a largo plazo: interfaces limpias, componentes consistentes, código mantenible y decisiones técnicas que puedan sostenerse cuando el producto crece.
 
-Here you will find projects that reflect my **curiosity**, **discipline**, and my commitment to **continuous improvement** as a developer.
+Trabajo principalmente con **Next.js, React, TypeScript y Tailwind CSS** para transformar ideas en experiencias rápidas, claras y bien ejecutadas. En este perfil encontrarás proyectos que reflejan mi forma de pensar y construir: **detalle, criterio, disciplina y mejora continua**.
 
 ---
 
-### Tech Stack & Expertise
+### Stack y Especialidad
 
 **Core Stack**
 <p align="left">
@@ -27,12 +27,12 @@ Here you will find projects that reflect my **curiosity**, **discipline**, and m
   <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
 </p>
 
-**What I Focus On**
+**En lo que me enfoco**
 
-- Building fast and maintainable interfaces with Next.js and React.
-- Writing scalable frontend code with TypeScript.
-- Creating clean and responsive UI systems with Tailwind CSS.
-- Improving product quality through consistency, clarity, and iteration.
+- Construir interfaces rápidas, sólidas y mantenibles con Next.js y React.
+- Escribir código escalable y confiable con TypeScript.
+- Diseñar sistemas UI limpios, coherentes y responsivos con Tailwind CSS.
+- Elevar la calidad del producto a través de claridad técnica, consistencia y refinamiento continuo.
 
 ---
 
