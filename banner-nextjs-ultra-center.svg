@@ -73,20 +73,6 @@
       <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="globalSweepH" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
-      <stop offset="20%" stop-color="#0070f3" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#0070f3" stop-opacity="0.22"/>
-      <stop offset="70%" stop-color="#8fd3ff" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="globalSweepV" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0070f3" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#0070f3" stop-opacity="0"/>
-      <stop offset="55%" stop-color="#0070f3" stop-opacity="0.16"/>
-      <stop offset="75%" stop-color="#ffffff" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#0070f3" stop-opacity="0"/>
-    </linearGradient>
     <radialGradient id="globalPulse" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#0070f3" stop-opacity="0.2"/>
       <stop offset="55%" stop-color="#0070f3" stop-opacity="0.08"/>
@@ -121,18 +107,6 @@
       <animate attributeName="ry" values="460;620;460" dur="14s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.2;0.45;0.2" dur="14s" repeatCount="indefinite"/>
     </ellipse>
-
-    <rect x="-620" y="-360" width="520" height="1480" fill="url(#globalSweepH)" opacity="0.42">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 2280 0; 0 0" dur="18s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.18;0.45;0.18" dur="18s" repeatCount="indefinite"/>
-    </rect>
-
-    <rect x="-320" y="-760" width="1840" height="520" fill="url(#globalSweepV)" opacity="0.25">
-      <animateTransform attributeName="transform" type="translate"
-                        values="0 0; 0 1880; 0 0" dur="24s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.28;0.1" dur="24s" repeatCount="indefinite"/>
-    </rect>
 
     <circle cx="-180" cy="980" r="3.4" fill="#8fd3ff" opacity="0">
       <animate attributeName="cx" values="-180;1620" dur="13s" repeatCount="indefinite"/>
