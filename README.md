@@ -28,18 +28,6 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./github-metrics.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./github-metrics-light.svg" />
-    <img src="./github-metrics.svg" alt="GitHub Metrics — Isometric Contributions" width="65%" />
-  </picture>
-</p>
-
----
-
-## 📈 Lenguajes más usados
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./github-languages.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./github-languages-light.svg" />
-    <img src="./github-languages.svg" alt="Top Languages" width="45%" />
+    <img src="./github-metrics.svg" alt="GitHub Metrics — Calendario semestral y habitos de contribucion" width="82%" />
   </picture>
 </p>

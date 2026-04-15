@@ -8,8 +8,8 @@ on:
     branches: [main]
 
 jobs:
-  # ── Calendario Isométrico 3D ──
-  isometric:
+  # ── Calendario semestral + habitos (modo oscuro) ──
+  semestral:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,71 +24,26 @@ jobs:
           config_display: large
           config_timezone: America/Bogota
 
-          # Calendario isométrico 3D — año completo
+          # Calendario isometrico semestral
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
 
-          # Fondo negro para combinar con el banner
+          # Habitos y actividad
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: no
+          plugin_habits_trim: yes
+
+          # Fondo transparente para integrarse con el perfil
           extras_css: |
             :root { --color-calendar-graph-day-L4-bg: #0070f3; --color-calendar-graph-day-L3-bg: #2196ff; --color-calendar-graph-day-L2-bg: #1565c0; --color-calendar-graph-day-L1-bg: #0d47a1; }
-            svg { background: #000000; }
+            svg { background: transparent; }
             .isocalendar svg { color: #0070f3; }
 
-  # ── Lenguajes más usados ──
-  languages:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          filename: github-languages.svg
-          user: ${{ github.repository_owner }}
-          template: classic
-          base: ""
-          config_display: columns
-          config_timezone: America/Bogota
-
-          # Lenguajes en formato compacto
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_limit: 8
-          plugin_languages_colors: "0:#0070f3, 1:#2196ff, 2:#42a5f5, 3:#64b5f6, 4:#90caf9, 5:#bbdefb, 6:#e3f2fd, 7:#ffffff"
-          plugin_languages_details: percentage
-          plugin_languages_indepth: yes
-
-          extras_css: |
-            svg { background: #000000; }
-
-  # ── Lenguajes (modo claro) ──
-  languages-light:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN || github.token }}
-          filename: github-languages-light.svg
-          user: ${{ github.repository_owner }}
-          template: classic
-          base: ""
-          config_display: columns
-          config_timezone: America/Bogota
-
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_limit: 8
-          plugin_languages_colors: "0:#0070f3, 1:#1565c0, 2:#0d47a1, 3:#2196ff, 4:#42a5f5, 5:#1976d2, 6:#0277bd, 7:#01579b"
-          plugin_languages_details: percentage
-          plugin_languages_indepth: yes
-
-          extras_css: |
-            svg { background: #ffffff; }
-
-  # ── Calendario Isométrico 3D (modo claro) ──
-  isometric-light:
+  # ── Calendario semestral + habitos (modo claro) ──
+  semestral-light:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -104,9 +59,16 @@ jobs:
           config_timezone: America/Bogota
 
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
+
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: no
+          plugin_habits_trim: yes
 
           extras_css: |
             :root { --color-calendar-graph-day-L4-bg: #0070f3; --color-calendar-graph-day-L3-bg: #2196ff; --color-calendar-graph-day-L2-bg: #1565c0; --color-calendar-graph-day-L1-bg: #0d47a1; }
-            svg { background: #ffffff; }
+            svg { background: transparent; }
             .isocalendar svg { color: #0070f3; }
