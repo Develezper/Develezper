@@ -22,7 +22,7 @@
 
 I turn complex ideas into **high-impact technology solutions**. My work spans the full product lifecycle, from designing hybrid data architectures and building robust APIs with **Node.js** and **Express** to integrating **applied AI** and delivering production-grade cloud deployments.
 
-My technical ecosystem is built for **scalability, security, and intelligence**. I specialize in **Next.js, React, TypeScript, and Tailwind CSS**, using the full stack capabilities of the framework together with **Node.js** services and **Express** APIs to build efficient, secure, and scalable business logic from the server outward.
+My technical ecosystem is built for **scalability, security, and intelligence**. I specialize in **Next.js, React, TypeScript, and Tailwind CSS**, using the full stack capabilities of the framework together with **Node.js** services and **Express** APIs to build efficient.
 
 I work across **relational and non-relational data architectures**, using **PostgreSQL, MySQL, and MongoDB** to balance flexibility, performance, and data integrity based on each project's needs. I also implement **advanced AI solutions** with LLMs, intelligent agents, and automation workflows that turn data into strategic decisions, and I package modern workloads with **Docker** for consistent delivery across environments.
 
